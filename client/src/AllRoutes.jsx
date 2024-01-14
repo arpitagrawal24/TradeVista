@@ -1,11 +1,11 @@
 import App from "./App"
-import Error from "./pages/Error"
 import Home from "./pages/Home"
+import Error from "./pages/Error"
 import Login from "./pages/Login"
-import Dashboard from "./pages/Dashboard"
-import Products from "./pages/Products"
 import Product from "./pages/Product"
-
+import Products from "./pages/Products"
+import Dashboard from "./pages/Dashboard"
+import AddProduct from "./pages/AddProduct"
 
 export const AllRoutes = [
     {
@@ -30,8 +30,13 @@ export const AllRoutes = [
                 element: <Products />,
             },
             {
-                path: "products/:id",
+                path: "product/:id",
                 element: <Product />,
+            },
+            {
+                path: "add-product",
+                element: <AddProduct />,
+                
             }
         ],
     },

@@ -1,14 +1,16 @@
+import { Provider } from "react-redux"
 import { Outlet } from "react-router-dom"
-import Nabar from "./components/Nabar"
 
+import { store } from "./store/store"
+import Nabar from "./components/Nabar"
 
 function App() {
 
   return (
-    <div>
+    <Provider store={store}>
       <Nabar />
       <Outlet />
-    </div>
+    </Provider>
   )
 }
 
